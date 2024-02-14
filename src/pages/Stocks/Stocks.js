@@ -16,7 +16,7 @@ export default function Stocks(props) {
         const { name, symbol } = stock;
 
         return (
-          <Link to={`/about/${symbol}`} key={symbol}>
+          <Link to={`/stocks/${symbol}`} key={symbol}>
             <h2>{name}</h2>
           </Link>
         );
@@ -24,3 +24,4 @@ export default function Stocks(props) {
     </div>
   );
 }
+
