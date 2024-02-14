@@ -12,16 +12,31 @@ export default function Stocks(props) {
 
   return (
     <div className="stocks">
-      {stocks.map((stock) => {
-        const { name, symbol } = stock;
-
-        return (
-          <Link to={`/stocks/${symbol}`} key={symbol}>
-            <h2>{name}</h2>
-          </Link>
-        );
-      })}
+            <h2>{stocks.name}</h2>
     </div>
   );
-}
+};
+
+////
+
+// export default function Price (props) {
+//     const params = useParams()
+//     const symbol = params.symbol
+
+//     const loaded = () => {
+//       return (
+//         <div>
+//           <h1>
+//             {coin.asset_id_base}/{coin.asset_id_quote}
+//           </h1>
+//           <h2>Current Price: ${coin.rate}</h2>
+//         </div>
+//       );
+//     };
+  
+//     const loading = () => {
+//       return <h1>Loading...</h1>;
+//     };
+//   };
+
 

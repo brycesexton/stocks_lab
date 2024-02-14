@@ -32,7 +32,7 @@ function App() {
     path: "/about",
     element: /*#__PURE__*/React.createElement(_pages_About_About__WEBPACK_IMPORTED_MODULE_0__["default"], null)
   }), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {
-    path: "/stock/:symbol",
+    path: "/stocks/:symbol",
     element: /*#__PURE__*/React.createElement(_pages_Stocks_Stocks__WEBPACK_IMPORTED_MODULE_2__["default"], null)
   })));
 }
@@ -113,23 +113,6 @@ function About(props) {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Home)
-/* harmony export */ });
-/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-function Home(props) {
-  return /*#__PURE__*/React.createElement("h1", null, "HOME PAGE");
-}
-;
-
-/***/ }),
-
-/***/ "./src/pages/Stocks/Stocks.js":
-/*!************************************!*\
-  !*** ./src/pages/Stocks/Stocks.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Stocks)
 /* harmony export */ });
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
@@ -198,6 +181,97 @@ function Stocks(props) {
     }, /*#__PURE__*/React.createElement("h2", null, name));
   }));
 }
+
+/***/ }),
+
+/***/ "./src/pages/Stocks/Stocks.js":
+/*!************************************!*\
+  !*** ./src/pages/Stocks/Stocks.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Stocks)
+/* harmony export */ });
+/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+function Stocks(props) {
+  const stocks = [{
+    name: "Apple Inc.",
+    symbol: "AAPL",
+    lastPrice: 140.64,
+    change: -0.280000000000001,
+    high: 141.74,
+    low: 140.35,
+    open: 141.5
+  }, {
+    name: "Microsoft Corporation",
+    symbol: "MSFT",
+    lastPrice: 64.98,
+    change: 0.109999999999999,
+    high: 65.45,
+    low: 64.76,
+    open: 65.12
+  }, {
+    name: "Alphabet Inc.",
+    symbol: "GOOGL",
+    lastPrice: 835.14,
+    change: -4.50999999999999,
+    high: 844,
+    low: 829.1,
+    open: 842
+  }, {
+    name: "Nvidia",
+    symbol: "NVDA",
+    lastPrice: 40.34,
+    change: 0.810000000000002,
+    high: 141.0244,
+    low: 139.76,
+    open: 140.08
+  }, {
+    name: "Oracle Corporation",
+    symbol: "ORCL",
+    lastPrice: 44.65,
+    change: -0.300000000000004,
+    high: 45.09,
+    low: 44.575,
+    open: 44.91
+  }, {
+    name: "Intel Corporation",
+    symbol: "INTL",
+    lastPrice: 36.16,
+    change: -0.370000000000005,
+    high: 36.78,
+    low: 36.125,
+    open: 36.58
+  }];
+  return /*#__PURE__*/React.createElement("div", {
+    className: "stocks"
+  }, /*#__PURE__*/React.createElement("h2", null, stocks.name));
+}
+;
+
+////
+
+// export default function Price (props) {
+//     const params = useParams()
+//     const symbol = params.symbol
+
+//     const loaded = () => {
+//       return (
+//         <div>
+//           <h1>
+//             {coin.asset_id_base}/{coin.asset_id_quote}
+//           </h1>
+//           <h2>Current Price: ${coin.rate}</h2>
+//         </div>
+//       );
+//     };
+
+//     const loading = () => {
+//       return <h1>Loading...</h1>;
+//     };
+//   };
 
 /***/ }),
 

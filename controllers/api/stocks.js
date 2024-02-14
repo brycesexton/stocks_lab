@@ -32,7 +32,7 @@ async function create(req, res){
 
 async function show(req ,res) {
     try {
-        const foundStock = await Stock.findOne({_id: req.params.id})
+        const foundStock = await Stock.findOne({symbol: req.params.symbol})
         if (!foundStock) throw new Error("Could not find stock")
         res.status(200).json(foundStock)
     } catch (error) {
